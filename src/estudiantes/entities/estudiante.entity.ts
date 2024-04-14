@@ -4,15 +4,39 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 export class Estudiante {
     @PrimaryGeneratedColumn()
+
     id: number;
 
     @Column()
-    firstName: string;
+    nombreCompleto: string;
 
     @Column()
-    lastName: string;
+    matricula: string;
 
-    @Column({ default: true })
-    isActive: boolean;
+    @Column()
+    carrera: string;
 
+    @Column()
+    curp: string;
+
+    @Column()
+    grupo: string;
+
+    @Column()
+    cuatrimestre: string;
+
+    @Column()
+    fechaNacimiento: string;
+
+    @Column()
+    sexo: string;
+
+    @Column()
+    division: string;
+
+    @Column()
+    seguro: string;
+
+    @Column({ default: false })
+    reingreso: boolean;
 }

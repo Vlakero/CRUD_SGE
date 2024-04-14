@@ -13,10 +13,9 @@ import { Estudiante } from './estudiantes/entities/estudiante.entity';
       port:3306,
       username:'root',
       password:'',
-      database:'',
+      database:'api',
       entities:[Estudiante],
       synchronize:true
-
     }),
     EstudiantesModule
   ],

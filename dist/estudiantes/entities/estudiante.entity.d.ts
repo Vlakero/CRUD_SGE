@@ -1,4 +1,5 @@
-export class CreateEstudianteDto {
+export declare class Estudiante {
+    id: number;
     nombreCompleto: string;
     matricula: string;
     carrera: string;
@@ -11,4 +12,3 @@ export class CreateEstudianteDto {
     seguro: string;
     reingreso: boolean;
 }
-
