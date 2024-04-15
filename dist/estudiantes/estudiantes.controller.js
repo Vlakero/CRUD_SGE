@@ -37,6 +37,9 @@ let EstudiantesController = class EstudiantesController {
     remove(id) {
         return this.estudiantesService.remove(+id);
     }
+    async findOneByMatricula(matricula) {
+        return this.estudiantesService.findOneByMatricula(matricula);
+    }
 };
 exports.EstudiantesController = EstudiantesController;
 __decorate([
@@ -74,6 +77,13 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], EstudiantesController.prototype, "remove", null);
+__decorate([
+    (0, common_1.Get)('matricula/:matricula'),
+    __param(0, (0, common_1.Param)('matricula')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], EstudiantesController.prototype, "findOneByMatricula", null);
 exports.EstudiantesController = EstudiantesController = __decorate([
     (0, common_1.Controller)('/api/estudiantes'),
     __metadata("design:paramtypes", [estudiantes_service_1.EstudiantesService])

@@ -9,4 +9,5 @@ export declare class EstudiantesController {
     findOne(id: string): Promise<import("./entities/estudiante.entity").Estudiante>;
     update(id: string, updateEstudianteDto: UpdateEstudianteDto): Promise<import("typeorm").UpdateResult>;
     remove(id: string): Promise<import("typeorm").DeleteResult>;
+    findOneByMatricula(matricula: string): Promise<import("./entities/estudiante.entity").Estudiante>;
 }

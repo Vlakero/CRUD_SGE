@@ -10,4 +10,5 @@ export declare class EstudiantesService {
     findOne(id: number): Promise<Estudiante>;
     update(id: number, UpdateEstudianteDto: UpdateEstudianteDto): Promise<import("typeorm").UpdateResult>;
     remove(id: number): Promise<import("typeorm").DeleteResult>;
+    findOneByMatricula(matricula: string): Promise<Estudiante | null>;
 }

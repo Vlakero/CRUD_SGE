@@ -36,6 +36,10 @@ let EstudiantesService = class EstudiantesService {
     async remove(id) {
         return await this.EstudianteRepository.delete(id);
     }
+    async findOneByMatricula(matricula) {
+        const estudiante = await this.EstudianteRepository.findOneBy({ matricula: matricula });
+        return estudiante;
+    }
 };
 exports.EstudiantesService = EstudiantesService;
 exports.EstudiantesService = EstudiantesService = __decorate([
