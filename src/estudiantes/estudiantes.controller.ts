@@ -11,7 +11,6 @@ export class EstudiantesController {
   create(@Body() createEstudianteDto: CreateEstudianteDto) {
     const estudiante = this.estudiantesService.create(createEstudianteDto);
     return estudiante;
-    //return this.estudiantesService.create(createEstudianteDto);
   }
 
   @Get()
@@ -32,5 +31,10 @@ export class EstudiantesController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.estudiantesService.remove(+id);
+  }
+
+  @Get('matricula/:matricula') 
+  async findOneByMatricula(@Param('matricula') matricula: string) {
+    return this.estudiantesService.findOneByMatricula(matricula);
   }
 }

@@ -23,14 +23,18 @@ export class EstudiantesService {
   }
 
   async findOne(id: number) {
-    return await this.EstudianteRepository.findOne({  });
+    return await this.EstudianteRepository.findOne({});
   }
 
   async update(id: number, UpdateEstudianteDto: UpdateEstudianteDto) {
-    return await this.EstudianteRepository.update( id, UpdateEstudianteDto);
+    return await this.EstudianteRepository.update(id, UpdateEstudianteDto);
   }
 
   async remove(id: number) {
     return await this.EstudianteRepository.delete(id);
+  }
+  async findOneByMatricula(matricula: string): Promise<Estudiante | null> {
+    const estudiante = await this.EstudianteRepository.findOneBy({matricula:matricula});
+    return estudiante;
   }
 }
