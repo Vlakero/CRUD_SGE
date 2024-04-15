@@ -1,11 +1,11 @@
 export declare class CreateEstudianteDto {
-    nombreCompleto: string;
+    student_name: string;
     matricula: string;
     carrera: string;
     curp: string;
     grupo: string;
     cuatrimestre: string;
-    fechaNacimiento: string;
+    fechaNacimiento: Date;
     sexo: string;
     division: string;
     seguro: string;

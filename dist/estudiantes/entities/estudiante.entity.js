@@ -21,7 +21,7 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], Estudiante.prototype, "nombreCompleto", void 0);
+], Estudiante.prototype, "student_name", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
@@ -44,7 +44,7 @@ __decorate([
 ], Estudiante.prototype, "cuatrimestre", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
+    __metadata("design:type", Date)
 ], Estudiante.prototype, "fechaNacimiento", void 0);
 __decorate([
     (0, typeorm_1.Column)(),

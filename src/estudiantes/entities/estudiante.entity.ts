@@ -8,7 +8,7 @@ export class Estudiante {
     id: number;
 
     @Column()
-    nombreCompleto: string;
+    student_name: string;
 
     @Column()
     matricula: string;
@@ -26,7 +26,7 @@ export class Estudiante {
     cuatrimestre: string;
 
     @Column()
-    fechaNacimiento: string;
+    fechaNacimiento: Date;
 
     @Column()
     sexo: string;
